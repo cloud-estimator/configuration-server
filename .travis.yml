@@ -1,7 +1,6 @@
 language: java
 jdk:
 - oraclejdk8
-cache:
-  directories:
-  - "$HOME/.m2"
 sudo: required
+before_install:
+  - chmod +x mvnw
