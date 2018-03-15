@@ -3,6 +3,8 @@ cache:
   directories:
   - "$HOME/.m2"
 sudo: required
+services:
+- docker
 notifications:
   email:
   - ci@estimator.cloud
@@ -12,4 +14,4 @@ branches:
   only:
   - master
 install: true
-script: ./mvnw install dockerfile:build
+script: ./mvnw clean package dockerfile:build
