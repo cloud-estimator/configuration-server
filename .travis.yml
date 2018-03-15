@@ -11,4 +11,5 @@ notifications:
 branches:
   only:
   - master
-install: "./mvnw clean package"
+install: true
+script: mvn clean package -DskipTests=true
