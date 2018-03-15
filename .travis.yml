@@ -12,4 +12,4 @@ branches:
   only:
   - master
 install: true
-script: ./mvnw clean package -DskipTests=true
+script: ./mvnw install dockerfile:build
