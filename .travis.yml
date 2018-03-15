@@ -11,4 +11,4 @@ notifications:
 branches:
   only:
   - master
-install: "mvn clean package docker:build"
+install: "./mvnw clean package docker:build"
