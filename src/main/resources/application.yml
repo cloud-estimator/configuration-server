@@ -1,15 +1,14 @@
 server:
   port: 8888
-
+  
 spring:
   cloud:
     config:
       discovery:
         enabled: true
       server:
-        encrypt.enabled: false
         git:
-          uri: https://github.com/carnellj/config-repo/
-          searchPaths: licensingservice,organizationservice,specialroutesservice,zuulservice,authenticationservice
-          username: native-cloud-apps
-          password: 0ffended
+          uri: https://github.com/cloud-estimator/configuration-repo
+          searchPaths: organization-service, project-service
+          username: # -Dspring.cloud.config.server.git.username
+          password: # -Dspring.cloud.config.server.git.password
