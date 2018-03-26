@@ -7,4 +7,3 @@ services:
        - "8888:8888"
     environment:
        EUREKASERVER_URI: "http://ec2-34-212-21-131.us-west-2.compute.amazonaws.com:8761/eureka/"
-       ENCRYPT_KEY:       "f3831f8cc338"
