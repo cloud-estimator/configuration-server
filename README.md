@@ -1,1 +1,1 @@
-# configuration-service
+# configuration-server

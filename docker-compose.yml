@@ -1,0 +1,10 @@
+version: '2'
+services:
+  configuration-server:
+    image: cloudestimator/configuration-server:${BUILD_NAME}
+    mem_limit: 1000000000
+    ports:
+       - "8888:8888"
+    environment:
+       EUREKASERVER_URI: "http://ec2-34-212-21-131.us-west-2.compute.amazonaws.com:8761/eureka/"
+       ENCRYPT_KEY:       "f3831f8cc338"

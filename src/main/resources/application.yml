@@ -7,6 +7,8 @@ spring:
       discovery:
         enabled: true
       server:
+        encrypt:
+          enabled: false
         git:
           uri: https://github.com/cloud-estimator/configuration-repo
           searchPaths: organization-service, project-service

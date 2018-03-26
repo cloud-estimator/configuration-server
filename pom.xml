@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>configuration-server</name>
-	<description>Discovery Server</description>
+	<description>Configuration Server</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -22,8 +22,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Finchley.M8</spring-cloud.version>
+		<spring-cloud.version>Finchley.M9</spring-cloud.version>
 		<docker.image.prefix>cloudestimator</docker.image.prefix>
+		<docker.image.tag>${env.BUILD_NAME}</docker.image.tag>
 	</properties>
 
 	<build>
@@ -46,6 +47,7 @@
 				</dependencies>
 				<configuration>
 					<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<tag>${docker.image.tag}</tag>
 					<buildArgs>
 						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
@@ -87,7 +89,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
