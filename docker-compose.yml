@@ -6,4 +6,4 @@ services:
     ports:
        - "8888:8888"
     environment:
-       EUREKASERVER_URI: "http://ip-172-31-5-46.us-west-2.compute.internal:8761/eureka/"
+       EUREKASERVER_URI: "http://internal-cloud-estimator-lb-1078220646.us-west-2.elb.amazonaws.com:8761/eureka/"
